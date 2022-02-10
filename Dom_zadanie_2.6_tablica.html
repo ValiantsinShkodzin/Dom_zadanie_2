@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            border: 3px solid green;
+        }
+        tr:nth-child(even) {
+            background: rgb(173, 173, 2);
+        }
+        tr:nth-child(odd) {
+            background: rgb(255, 255, 110);
+        }
+    </style>
+</head>
+<body>
+    <div id="tab1">
+        <!-- <table>
+            <tbody>
+                <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                    <td>Ячейка 3</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 4</td>
+                    <td>Ячейка 5</td>
+                    <td>Ячейка 6</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 7</td>
+                    <td>Ячейка 8</td>
+                    <td>Ячейка 9</td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+    <script>
+        let x = +prompt("Введите столбцы: ");
+        let y = +prompt("Введите строки: ");
+        let count = 1;
+            let tab = "<table><tbody>";
+
+                for (i=1; i<=y; i++) {
+                tab += "<tr>"
+                        
+                    for (j=1; j<=x; j++)
+                    
+                    // tab += `<td> <img src="images/${i}.jpg" alt=""></td>`;
+                    tab += `<td> <a href="Link${count}.html">Ячейка ${count++}</a></td>`;
+                    tab += "</tr>"
+                }
+                tab += "</tbody></table>";
+    tab1.innerHTML = tab;
+    </script>
+
+</body>
+</html>
